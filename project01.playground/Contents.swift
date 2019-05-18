@@ -1,7 +1,3 @@
-import UIKit
-
-var str = "Hello, playground"
-
 //each players
 
 let player1 : [String : String] = ["name": "Joe Smith", "height": "42", "experience":"true", "guardian": "Jim and Jan Smith"]
