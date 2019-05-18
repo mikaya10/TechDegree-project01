@@ -54,11 +54,12 @@ var teamDragons: [[String : String]] = []
 var teamSharks: [[String : String]] = []
 var teamRaptors: [[String : String]] = []
 
+var allTeam = [teamDragons, teamSharks, teamRaptors]
 
 for i in 0 ..< sortedexperienced.count {
-    if i % 3 == 0 {
+    if i % allTeam.count == 0 {
         teamDragons.append(sortedexperienced[i])
-    } else if i % 3 == 1 {
+    } else if i % allTeam.count == 1 {
         teamSharks.append(sortedexperienced[i])
     } else {
         teamRaptors.append(sortedexperienced[i])
@@ -66,9 +67,9 @@ for i in 0 ..< sortedexperienced.count {
 }
 
 for i in 0 ..< sortedinedexperienced.count {
-    if i % 3 == 0 {
+    if i % allTeam.count == 0 {
         teamRaptors.append(sortedinedexperienced[i])
-    } else if i % 3 == 1 {
+    } else if i % allTeam.count == 1 {
         teamSharks.append(sortedinedexperienced[i])
     } else {
         teamDragons.append(sortedinedexperienced[i])
@@ -134,9 +135,12 @@ for player in teamRaptors {
     let guardians = player["guardian"]!
     var letter = "Dear, \(guardians), \(name )is chosen to play in Team Raptors. Please come to our first practice on March 18th at 1PM. See you there!"
     letters.append(letter)
-    
 }
-print(letters)
+
+for letter in letters {
+    print(letter)
+}
+
 
 
 
